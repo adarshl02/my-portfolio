@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     {
       title: "Pratibimb – AWS-Hosted Scalable Event & Payment Platform",
       url: "https://www.clubpratibimb.com",
-      icon: Server,
+      icon: "/pratibimb.png",
       tech: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "AWS EC2", "S3", "CloudFront", "NGINX", "Jenkins", "GitHub Actions"],
       points: [
         "QR-based event ticketing & attendance to prevent ticket fraud",
@@ -18,8 +18,8 @@ const ProjectsSection = () => {
     },
     {
       title: "ShopMe – AI-Powered E-Commerce with CI/CD",
-      url: "#",
-      icon: Smartphone,
+      url: "https://shopme-p8f2.onrender.com",
+      icon: "/ShopMe.png",
       tech: ["MERN", "Redux Toolkit", "Material UI", "Stripe", "Redis", "Docker", "Kubernetes", "AWS EKS", "Jenkins", "ArgoCD", "Terraform", "Prometheus", "Grafana"],
       points: [
         "Full-stack e-commerce with product CRUD, cart, orders and Stripe payments",
@@ -27,25 +27,50 @@ const ProjectsSection = () => {
         "CI/CD with Jenkins, GitHub, Docker, SonarQube, Trivy, and ArgoCD for Kubernetes deployments on AWS EKS",
         "Infrastructure as Code using Terraform and centralized monitoring with Prometheus + Grafana"
       ]
-    }
+    },
+    {
+    title: "AntiPhishX – AI-Powered Phishing Detection System",
+    url: "https://antiphishx.site",
+    icon: "/antiphish.png", // put this image in /public (rename if needed)
+    tech: ["React", "Express", "AWS EC2", "AWS S3", "CloudFront", "DynamoDB", "AWS Rekognition", "AWS Comprehend", "Kaggle ML Model"],
+    points: [
+  "AI-powered phishing detection that analyzes both text and images using OCR + NLP",
+  "AWS Rekognition extracts text from screenshots, and Comprehend performs NLP for threat analysis",
+  "Custom ML model aggregates signals to classify content as Phishing or Not Phishing, deployed on EC2 with S3 + CloudFront"
+]
+  }
   ];
 
   return (
     <section id="projects" className="py-12 px-6 scroll-mt-20">
       <h2 className="section-heading">Web Projects</h2>
-      
+
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, idx) => (
           <div key={idx} className="aws-card flex flex-col h-full">
             {/* Project Icon */}
-            <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-glow-orange">
-              <project.icon className="w-8 h-8 text-primary-foreground" />
+            <div className="w-16 h-16 rounded-lg  flex items-center justify-center mb-4 ">
+              <img
+                src={project.icon}
+                alt={project.title}
+                className="w-16 h-16 object-contain"
+              />
+
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-foreground mb-3 leading-tight">
-              {project.title}
+            <h3 className="text-xl font-bold text-foreground mb-3 leading-tight flex items-center gap-2">
+              <span>{project.title}</span>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:underline"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </h3>
+
 
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
@@ -59,24 +84,13 @@ const ProjectsSection = () => {
             {/* Key Points */}
             <ul className="space-y-2 text-sm text-foreground mb-6 flex-grow">
               {project.points.map((point, i) => (
-                <li key={i} className="flex gap-2">
+                <li key={i} className="flex gap-2 text-xs text-slate-350">
                   <span className="text-primary font-bold mt-1">•</span>
                   <span>{point}</span>
                 </li>
               ))}
             </ul>
 
-            {/* View Project Button */}
-            <Button
-              variant="outline"
-              className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              asChild
-            >
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Project
-              </a>
-            </Button>
           </div>
         ))}
       </div>

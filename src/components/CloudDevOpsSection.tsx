@@ -1,4 +1,4 @@
-import { Award, Cloud, Container, Cog } from "lucide-react";
+import { Award, Cloud, Container, Cog, ExternalLink } from "lucide-react";
 
 const CloudDevOpsSection = () => {
   const certifications = [
@@ -6,7 +6,8 @@ const CloudDevOpsSection = () => {
       title: "AWS Certified Solutions Architect – Associate",
       date: "Nov 2025",
       score: "801/1000",
-      icon: Award,
+      icon: "aws1.png",
+      url: "https://www.credly.com/badges/5455cc07-fd42-4fc3-96f5-1adfb78994b0/public_url",
       skills: [
         "Designing highly available architectures",
         "Cost-optimized solutions with S3, RDS, Lambda",
@@ -18,7 +19,8 @@ const CloudDevOpsSection = () => {
       title: "AWS Certified Cloud Practitioner",
       date: "Jun 2025",
       score: "837/1000",
-      icon: Cloud,
+      icon: "aws2.png",
+      url: "https://www.credly.com/badges/1e7a0762-a645-4ec9-992d-1272f08e0059/public_url",
       skills: [
         "AWS core services and global infrastructure",
         "Billing, pricing, and cost management",
@@ -69,7 +71,7 @@ const CloudDevOpsSection = () => {
   return (
     <section id="cloud-devops" className="py-12 px-6 scroll-mt-20">
       <h2 className="section-heading">Cloud & DevOps</h2>
-      
+
       {/* AWS Certifications */}
       <div className="mb-8">
         <h3 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -80,11 +82,24 @@ const CloudDevOpsSection = () => {
           {certifications.map((cert, idx) => (
             <div key={idx} className="aws-card">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-glow-orange">
-                  <cert.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="w-16 h-16 rounded-lg  flex items-center justify-center flex-shrink-0 ">
+                  <img
+                    src={cert.icon}
+                    alt={cert.title}
+                    className="w-16 h-16 object-contain"
+                  />
+
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-foreground">{cert.title}</h4>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-lg font-bold text-foreground hover:underline"
+                  >
+                    {cert.title}
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
                   <p className="text-sm text-muted-foreground mt-1">{cert.date}</p>
                   <p className="text-sm font-semibold text-primary mt-1">Score: {cert.score}</p>
                 </div>
@@ -134,18 +149,6 @@ const CloudDevOpsSection = () => {
         </div>
       </div>
 
-      {/* Other Certifications */}
-      <div>
-        <h3 className="text-2xl font-semibold text-foreground mb-4">Other Certifications</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          {otherCerts.map((cert, idx) => (
-            <div key={idx} className="aws-card">
-              <h4 className="text-lg font-bold text-foreground mb-2">{cert.title}</h4>
-              <p className="text-sm text-muted-foreground">{cert.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };

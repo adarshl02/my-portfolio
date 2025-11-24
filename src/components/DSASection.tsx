@@ -4,60 +4,42 @@ const DSASection = () => {
   const platforms = [
     {
       name: "LeetCode",
-      url: "https://leetcode.com/your_handle",
-      logo: Code2,
+      url: "https://leetcode.com/u/adarshl02",
+      logo: "leetcode.png",
       color: "from-yellow-500 to-orange-500",
       achievements: [
-        "Solved 300+ problems",
+        "Solved 550+ problems",
         "Multiple topic-wise streaks in DP, graphs, and greedy"
       ]
     },
-    {
-      name: "GeeksforGeeks",
-      url: "https://auth.geeksforgeeks.org/user/your_handle",
-      logo: Code2,
-      color: "from-green-500 to-emerald-600",
-      achievements: [
-        "Solved 250+ DSA problems",
-        "Practiced company-tagged questions for interviews"
-      ]
-    },
+   
     {
       name: "CodeChef",
-      url: "https://www.codechef.com/users/your_handle",
-      logo: Trophy,
+      url: "https://www.codechef.com/users/adarshl02",
+      logo: "codechef.png",
       color: "from-purple-500 to-pink-500",
       achievements: [
         "40+ contests given",
         "Global rank 676 in Starters 194"
       ]
     },
-    {
-      name: "Codeforces",
-      url: "https://codeforces.com/profile/your_handle",
-      logo: Code2,
-      color: "from-blue-500 to-cyan-500",
-      achievements: [
-        "Active competitive programmer",
-        "Regular contest participation"
-      ]
-    }
   ];
 
   return (
     <section id="dsa" className="py-12 px-6 scroll-mt-20">
       <h2 className="section-heading">Data Structures & Algorithms</h2>
       
-      <p className="text-lg text-muted-foreground mb-8">
+      {/* <p className="text-lg text-muted-foreground mb-8">
         Competitive programming & problem solving
-      </p>
+      </p> */}
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {platforms.map((platform, idx) => (
           <div key={idx} className="aws-card">
             <div className="flex items-start gap-4 mb-4">
-              <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${platform.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                <platform.logo className="w-8 h-8 text-white" />
+              <div className={`w-16 h-16 rounded-lg  ${platform.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                {/* <platform.logo className="w-8 h-8 text-white" /> */}
+                <img src={platform.logo} alt={platform.name} className="w-16 h-16" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-foreground">{platform.name}</h3>

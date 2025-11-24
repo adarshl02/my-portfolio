@@ -47,7 +47,7 @@ const ContactSection = () => {
                 href="mailto:adarshl10604@gmail.com"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center ">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ const ContactSection = () => {
                 href="tel:+919200203742"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center ">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -72,65 +72,29 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+                {/* Available for Hire */}
         <div className="aws-card">
-          <h3 className="text-xl font-bold text-foreground mb-4">Send a Message</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="name" className="text-sm font-medium text-foreground mb-2 block">
-                Name
-              </label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                required
-                className="bg-background border-border focus:border-primary"
-              />
+          <div className="space-y-6">
+             
+            
+            <div className="border-l-4 border-primary pl-6 py-4">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Available for Hire</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                As an AWS Certified Solutions Architect, I am currently available for freelance and full-time opportunities. Let's discuss how I can help design, build, and scale your cloud infrastructure.
+              </p>
             </div>
 
-            <div>
-              <label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">
-                Email
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="your.email@example.com"
-                required
-                className="bg-background border-border focus:border-primary"
-              />
+            <div className="flex justify-center pt-4">
+              <Button
+                asChild
+                className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-glow-purple transition-all duration-300"
+              >
+                <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">
+                  Book a 30 min slot
+                </a>
+              </Button>
             </div>
-
-            <div>
-              <label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your message..."
-                rows={5}
-                required
-                className="bg-background border-border focus:border-primary resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-accent text-primary-foreground font-semibold shadow-lg hover:shadow-glow-orange transition-all duration-300"
-            >
-              <Send className="w-4 h-4 mr-2" />
-              Send Message
-            </Button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

@@ -99,13 +99,13 @@ All colors MUST be HSL.
   /* AWS-themed card with hover effects */
   .aws-card {
     @apply bg-card border border-border rounded-lg p-6 transition-all duration-300;
-    @apply hover:border-primary hover:shadow-lg;
+    /* @apply hover:border-primary hover:shadow-lg; */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   }
 
-  .aws-card:hover {
+  /* .aws-card:hover {
     box-shadow: 0 10px 25px -5px rgba(255, 153, 0, 0.2);
-  }
+  } */
 
   /* Section heading style */
   .section-heading {

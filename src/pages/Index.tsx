@@ -71,11 +71,11 @@ const Index = () => {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    activeSection === section.id
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                  }`}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium  ${activeSection === section.id
+                      ? "text-primary  border-primary"
+                      : "text-muted-foreground hover:text-foreground"
+
+                    }`}
                 >
                   {section.label}
                 </button>
@@ -101,11 +101,11 @@ const Index = () => {
             <ExtrasSection />
             <EducationSection />
             <ContactSection />
-            
+
             {/* Footer */}
-            <footer className="py-8 px-6 text-center border-t border-border">
+            <footer className="py-8 px-6 text-center border-t border-border text-xs">
               <p className="text-muted-foreground">
-                © 2025 Adarsh Landge. Built with React, TypeScript & Tailwind CSS
+                © 2025 Adarsh Landge. All rights reserved.
               </p>
             </footer>
           </div>

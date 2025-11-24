@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+🌐 Adarsh Landge — Portfolio Website
 
-## Project info
+Welcome to the official portfolio website of Adarsh Landge, a Full Stack Web & Cloud Developer specializing in AWS, DevOps, and modern JavaScript technologies.
 
-**URL**: https://lovable.dev/projects/6e55ea9e-6fac-4416-9a4c-5d489ddb84b1
+This site highlights my projects, certifications, experience, skills, and the cloud-native solutions I’ve built.
 
-## How can I edit this code?
+🚀 Tech Stack
 
-There are several ways of editing your application.
+This portfolio is built using:
+# Adarsh Landge — Portfolio
 
-**Use Lovable**
+This repository contains the source for my personal portfolio website built with Vite, React, TypeScript and Tailwind CSS. The site showcases projects, experience, certifications, and contact information.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6e55ea9e-6fac-4416-9a4c-5d489ddb84b1) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech stack
 
-**Use your preferred IDE**
+- **Framework:** Vite + React
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI:** shadcn/ui (Radix + Tailwind)
+- **Icons:** Lucide
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Features
 
-Follow these steps:
+- Responsive, accessible and modern UI
+- Component-driven architecture
+- Projects, experience, education and contact sections
+- Resume download button
+- Theme (light/dark) support
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Node.js (v16 or newer recommended)
+- npm (or use a compatible package manager)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## Setup & Development
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/adarshl02/my-portfolio.git
+cd my-portfolio
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server runs on `http://localhost:5173` by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Build & Preview
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Build for production:
 
-## What technologies are used for this project?
+```bash
+npm run build
+```
 
-This project is built with:
+Preview the production build locally:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run preview
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/6e55ea9e-6fac-4416-9a4c-5d489ddb84b1) and click on Share -> Publish.
+## Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+- `public/` — Static assets (images, resume, icons)
+- `src/main.tsx` — App entry
+- `src/App.tsx` — Top-level app component
+- `src/components/` — Reusable UI components and sections
+- `src/hooks/` — Custom hooks
+- `src/lib/` — Utilities
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+You can deploy the built `dist/` folder to any static hosting provider. Popular options:
+
+- Vercel
+- Netlify
+- AWS S3 + CloudFront
+- GitHub Pages (build step required)
+
+General CI/CD flow:
+
+1. Run `npm ci` or `npm install` on the runner
+2. Run `npm run build`
+3. Upload the `dist/` directory to the host
+
+---
+
+## Contributing
+
+This repository is primarily a personal portfolio. If you'd like to suggest improvements (fixes, accessibility, performance), open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is available for learning and reference purposes.
+
+---
+
+## Contact
+
+- GitHub: https://github.com/adarshl02
+- Email: (add your email here)

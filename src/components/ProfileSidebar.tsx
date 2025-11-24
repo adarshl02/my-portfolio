@@ -6,8 +6,8 @@ const ProfileSidebar = () => {
     <aside className="w-full lg:w-80 bg-sidebar border-r border-sidebar-border p-6 lg:fixed lg:h-screen overflow-y-auto">
       <div className="flex flex-col items-center space-y-6">
         {/* Profile Photo */}
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center border-4 border-primary shadow-glow-orange">
-          <span className="text-5xl font-bold text-primary-foreground">AL</span>
+        <div >
+          <img src="Its_Me.jpg" alt="image" className="w-32 h-32 rounded-full  flex items-center justify-center  shadow-glow-orange" />
         </div>
 
         {/* Name & Title */}
@@ -43,7 +43,7 @@ const ProfileSidebar = () => {
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://github.com/adarshlandge"
+            href="https://github.com/adarshl02"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-secondary hover:bg-primary transition-all duration-300 hover:shadow-glow-orange"
@@ -51,7 +51,7 @@ const ProfileSidebar = () => {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://upwork.com/freelancers/adarshlandge"
+            href="https://www.upwork.com/freelancers/~019d599dacb5e73aaf"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-secondary hover:bg-primary transition-all duration-300 hover:shadow-glow-orange"
@@ -63,7 +63,7 @@ const ProfileSidebar = () => {
         {/* CTA Buttons */}
         <div className="w-full space-y-3 pt-4">
           <Button
-            className="w-full bg-primary hover:bg-accent text-primary-foreground font-semibold shadow-lg hover:shadow-glow-orange transition-all duration-300"
+            className="w-full    font-semibold shadow-lg  transition-all duration-300"
             asChild
           >
             <a href="/Adarsh_Landge_Resume.pdf" download>

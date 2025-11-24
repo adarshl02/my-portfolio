@@ -29,7 +29,7 @@ const ExperienceSection = () => {
             </p>
 
             {/* Key Achievements */}
-            <ul className="space-y-3 text-foreground">
+            <ul className="space-y-3 text-foreground text-xs text-slate-300">
               <li className="flex gap-3">
                 <span className="text-primary font-bold">•</span>
                 <span>Built real-time market data streaming using Context API + WebSockets from an EC2 server</span>
