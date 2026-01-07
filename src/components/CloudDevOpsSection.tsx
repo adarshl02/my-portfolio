@@ -27,6 +27,19 @@ const CloudDevOpsSection = () => {
         "Security & shared responsibility model",
         "Cloud architecture fundamentals"
       ]
+    },
+     {
+      title: "Hashicorp Certified: Terraform Associate 003",
+      date: "Jan 2026",
+      score: "PASSED",
+      icon: "terraform.png",
+      url: "https://www.credly.com/badges/0ab4bf46-4b48-46f1-9612-7bfde74079fc/public_url",
+      skills: [
+        "Infrastructure as Code (IaC) concepts & benefits",
+        "Core Terraform workflow: init, plan, apply & destroy",
+        "Resource lifecycle, dependency graph & state management",
+        "Modules, variables, outputs & reusable configurations"
+      ]
     }
   ];
 
@@ -76,7 +89,7 @@ const CloudDevOpsSection = () => {
       <div className="mb-8">
         <h3 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-2">
           <Award className="w-6 h-6 text-primary" />
-          AWS Certifications
+          AWS and Iac Certifications
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {certifications.map((cert, idx) => (
